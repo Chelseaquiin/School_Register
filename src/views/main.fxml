@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="514.0" prefWidth="788.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
+   <children>
+      <BorderPane prefHeight="504.0" prefWidth="673.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <right>
+            <AnchorPane prefHeight="514.0" prefWidth="151.0" style="-fx-background-color: #212121;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox layoutX="46.0" layoutY="80.0" prefHeight="530.0" prefWidth="179.0" style="-fx-background-color: #212121; -fx-background-radius: 5;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <VBox alignment="CENTER" onMouseClicked="#loadAddStudents" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #fff; -fx-border-color: #212121; -fx-border-radius: 20; -fx-background-radius: 30;" VBox.vgrow="ALWAYS">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                           </VBox.margin>
+                           <children>
+                              <ImageView fx:id="addstudentimg" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label text="Add Students">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" onMouseClicked="#loadAddTeachers" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #fff; -fx-border-color: #212121; -fx-border-radius: 20; -fx-background-radius: 30;" VBox.vgrow="ALWAYS">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                           </VBox.margin>
+                           <children>
+                              <ImageView fx:id="addteacherimg" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label text="Add Teachers">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="210.0" onMouseClicked="#loadViewStudents" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #fff; -fx-border-color: #212121; -fx-border-radius: 20; -fx-background-radius: 30;" VBox.vgrow="ALWAYS">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                           </VBox.margin>
+                           <children>
+                              <ImageView fx:id="viewstudentimg" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label text="View Students">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="364.0" onMouseClicked="#loadViewTeachers" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #fff; -fx-border-color: #212121; -fx-border-radius: 20; -fx-background-radius: 30;" VBox.vgrow="ALWAYS">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                           </VBox.margin>
+                           <children>
+                              <ImageView fx:id="viewteachersimg" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label text="View Teachers">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </right>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #353535;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #3f3f3f; -fx-background-radius: 20;" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <children>
+                        <JFXTextField fx:id="studentinput" focusColor="#ffd300" labelFloat="true" onAction="#loadstudentinfo" promptText="Enter Students ID" style="-fx-text-fill: #fff;" unFocusColor="#c9c1c1" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                        </JFXTextField>
+                        <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label text="Name:" textFill="#ffd300">
+                                       <font>
+                                          <Font name="Gill Sans Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="studentname" layoutX="10.0" layoutY="10.0" textFill="#e8dede">
+                                       <font>
+                                          <Font name="Lucida Sans Regular" size="10.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label text="Class:" textFill="#ffd300">
+                                       <font>
+                                          <Font name="Gill Sans Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="studentclass" textFill="WHITE">
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="119.0" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label text="Student ID:" textFill="#ffd300">
+                                       <font>
+                                          <Font name="Gill Sans Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="studentid" textFill="#e8dede">
+                                       <font>
+                                          <Font name="Lucida Sans Regular" size="10.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="154.0" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label text="Email:" textFill="#ffd300">
+                                       <font>
+                                          <Font name="Gill Sans Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="studentemail" textFill="#e8dede">
+                                       <font>
+                                          <Font name="Lucida Sans Regular" size="10.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #3f3f3f; -fx-background-radius: 20;" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <children>
+                        <JFXTextField fx:id="teachersinput" focusColor="#ffd300" labelFloat="true" onAction="#loadTeachersinfo" promptText="Enter Teacher's ID" style="-fx-text-fill: #fff;" unFocusColor="#c9c1c1" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                        </JFXTextField>
+                        <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label text="Name:" textFill="#ffd300">
+                                       <font>
+                                          <Font name="Gill Sans Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="teachersname" layoutX="10.0" layoutY="10.0" textFill="#e8dede">
+                                       <font>
+                                          <Font name="Lucida Sans Regular" size="10.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label text="Phone No:" textFill="#ffd300">
+                                       <font>
+                                          <Font name="Gill Sans Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="teachersphone" textFill="WHITE">
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="119.0" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label text="Student ID:" textFill="#ffd300">
+                                       <font>
+                                          <Font name="Gill Sans Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="teachersid" textFill="#e8dede">
+                                       <font>
+                                          <Font name="Lucida Sans Regular" size="10.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="154.0" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label text="Email:" textFill="#ffd300">
+                                       <font>
+                                          <Font name="Gill Sans Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="teachersemail" textFill="#e8dede">
+                                       <font>
+                                          <Font name="Lucida Sans Regular" size="10.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
